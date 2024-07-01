@@ -1,109 +1,109 @@
 ﻿cl : ligne de commande  warning D9025: substitution de '/sdl' par '/GS-'
   Custom.cpp
   dllmain.cpp
-C:\Users\monstercheat\Desktop\Apex_Private_Internal\Apex_Private_Internal\math.hpp(2,9): warning C4005: 'M_PI' : redéfinition de macro
-C:\Users\monstercheat\Desktop\Apex_Private_Internal\Apex_Private_Internal\math.hpp(299,8): warning C4141: 'inline' : utilisé plusieurs fois
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(12,9): warning C4005: 'DXGI_STATUS_OCCLUDED' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(13,9): warning C4005: 'DXGI_STATUS_CLIPPED' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(14,9): warning C4005: 'DXGI_STATUS_NO_REDIRECTION' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(15,9): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(16,9): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(17,9): warning C4005: 'DXGI_STATUS_MODE_CHANGED' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(18,9): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(21,9): warning C4005: 'DXGI_ERROR_INVALID_CALL' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(22,9): warning C4005: 'DXGI_ERROR_NOT_FOUND' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(23,9): warning C4005: 'DXGI_ERROR_MORE_DATA' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(24,9): warning C4005: 'DXGI_ERROR_UNSUPPORTED' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(25,9): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(26,9): warning C4005: 'DXGI_ERROR_DEVICE_HUNG' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(27,9): warning C4005: 'DXGI_ERROR_DEVICE_RESET' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(28,9): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(29,9): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(30,9): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(31,9): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(32,9): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(33,9): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(34,9): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(35,9): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d11.h(917,9): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d11.h(918,9): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d11.h(919,9): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d11.h(920,9): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d10.h(608,9): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d10.h(609,9): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND' : redéfinition de macro
-C:\Users\monstercheat\Desktop\Apex_Private_Internal\Apex_Private_Internal\cheat.hpp(501,10): warning C4477: 'printf' : la chaîne de format '%lx' nécessite un argument de type 'unsigned long', mais l'argument variadique 1 est de type 'ULONG64'
-C:\Users\monstercheat\Desktop\Apex_Private_Internal\Apex_Private_Internal\cheat.hpp(502,10): warning C4477: 'printf' : la chaîne de format '%lx' nécessite un argument de type 'unsigned long', mais l'argument variadique 1 est de type 'ULONG64'
-C:\Users\monstercheat\Desktop\Apex_Private_Internal\Apex_Private_Internal\cheat.hpp(504,10): warning C4477: 'printf' : la chaîne de format '%lx' nécessite un argument de type 'unsigned long', mais l'argument variadique 1 est de type 'ULONG64'
-C:\Users\monstercheat\Desktop\Apex_Private_Internal\Apex_Private_Internal\cheat.hpp(520,27): warning C4312: 'reinterpret_cast' : la conversion de 'long' en 'GlowMode *' d'une taille supérieure
-C:\Users\monstercheat\Desktop\Apex_Private_Internal\Apex_Private_Internal\cheat.hpp(521,4): warning C4312: 'reinterpret_cast' : la conversion de 'long' en 'GlowMode *' d'une taille supérieure
-C:\Users\monstercheat\Desktop\Apex_Private_Internal\Apex_Private_Internal\cheat.hpp(525,28): warning C4312: 'reinterpret_cast' : la conversion de 'long' en 'Vector3 *' d'une taille supérieure
-C:\Users\monstercheat\Desktop\Apex_Private_Internal\Apex_Private_Internal\cheat.hpp(526,3): warning C4312: 'reinterpret_cast' : la conversion de 'long' en 'Vector3 *' d'une taille supérieure
-C:\Users\monstercheat\Desktop\Apex_Private_Internal\Apex_Private_Internal\cheat.hpp(1074,8): warning C4312: 'reinterpret_cast' : la conversion de 'int' en 'int *' d'une taille supérieure
-C:\Users\monstercheat\Desktop\Apex_Private_Internal\Apex_Private_Internal\cheat.hpp(1162,7): warning C4312: 'reinterpret_cast' : la conversion de 'int' en 'int *' d'une taille supérieure
+C:\Users\monstercheat\Desktop\MCApexInternal-main\Apex_Private_Internal\math.hpp(2,9): warning C4005: 'M_PI' : redéfinition de macro
+C:\Users\monstercheat\Desktop\MCApexInternal-main\Apex_Private_Internal\math.hpp(299,8): warning C4141: 'inline' : utilisé plusieurs fois
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(12,9): warning C4005: 'DXGI_STATUS_OCCLUDED' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(13,9): warning C4005: 'DXGI_STATUS_CLIPPED' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(14,9): warning C4005: 'DXGI_STATUS_NO_REDIRECTION' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(15,9): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(16,9): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(17,9): warning C4005: 'DXGI_STATUS_MODE_CHANGED' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(18,9): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(21,9): warning C4005: 'DXGI_ERROR_INVALID_CALL' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(22,9): warning C4005: 'DXGI_ERROR_NOT_FOUND' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(23,9): warning C4005: 'DXGI_ERROR_MORE_DATA' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(24,9): warning C4005: 'DXGI_ERROR_UNSUPPORTED' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(25,9): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(26,9): warning C4005: 'DXGI_ERROR_DEVICE_HUNG' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(27,9): warning C4005: 'DXGI_ERROR_DEVICE_RESET' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(28,9): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(29,9): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(30,9): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(31,9): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(32,9): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(33,9): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(34,9): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(35,9): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\d3d11.h(917,9): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\d3d11.h(918,9): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\d3d11.h(919,9): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\d3d11.h(920,9): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\d3d10.h(608,9): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\d3d10.h(609,9): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND' : redéfinition de macro
+C:\Users\monstercheat\Desktop\MCApexInternal-main\Apex_Private_Internal\cheat.hpp(460,10): warning C4477: 'printf' : la chaîne de format '%lx' nécessite un argument de type 'unsigned long', mais l'argument variadique 1 est de type 'ULONG64'
+C:\Users\monstercheat\Desktop\MCApexInternal-main\Apex_Private_Internal\cheat.hpp(461,10): warning C4477: 'printf' : la chaîne de format '%lx' nécessite un argument de type 'unsigned long', mais l'argument variadique 1 est de type 'ULONG64'
+C:\Users\monstercheat\Desktop\MCApexInternal-main\Apex_Private_Internal\cheat.hpp(463,10): warning C4477: 'printf' : la chaîne de format '%lx' nécessite un argument de type 'unsigned long', mais l'argument variadique 1 est de type 'ULONG64'
+C:\Users\monstercheat\Desktop\MCApexInternal-main\Apex_Private_Internal\cheat.hpp(479,27): warning C4312: 'reinterpret_cast' : la conversion de 'long' en 'GlowMode *' d'une taille supérieure
+C:\Users\monstercheat\Desktop\MCApexInternal-main\Apex_Private_Internal\cheat.hpp(480,4): warning C4312: 'reinterpret_cast' : la conversion de 'long' en 'GlowMode *' d'une taille supérieure
+C:\Users\monstercheat\Desktop\MCApexInternal-main\Apex_Private_Internal\cheat.hpp(484,28): warning C4312: 'reinterpret_cast' : la conversion de 'long' en 'Vector3 *' d'une taille supérieure
+C:\Users\monstercheat\Desktop\MCApexInternal-main\Apex_Private_Internal\cheat.hpp(485,3): warning C4312: 'reinterpret_cast' : la conversion de 'long' en 'Vector3 *' d'une taille supérieure
+C:\Users\monstercheat\Desktop\MCApexInternal-main\Apex_Private_Internal\cheat.hpp(1033,8): warning C4312: 'reinterpret_cast' : la conversion de 'int' en 'int *' d'une taille supérieure
+C:\Users\monstercheat\Desktop\MCApexInternal-main\Apex_Private_Internal\cheat.hpp(1121,7): warning C4312: 'reinterpret_cast' : la conversion de 'int' en 'int *' d'une taille supérieure
   imgui.cpp
   imgui_demo.cpp
   imgui_draw.cpp
   imgui_impl_dx11.cpp
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(12,9): warning C4005: 'DXGI_STATUS_OCCLUDED' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(13,9): warning C4005: 'DXGI_STATUS_CLIPPED' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(14,9): warning C4005: 'DXGI_STATUS_NO_REDIRECTION' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(15,9): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(16,9): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(17,9): warning C4005: 'DXGI_STATUS_MODE_CHANGED' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(18,9): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(21,9): warning C4005: 'DXGI_ERROR_INVALID_CALL' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(22,9): warning C4005: 'DXGI_ERROR_NOT_FOUND' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(23,9): warning C4005: 'DXGI_ERROR_MORE_DATA' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(24,9): warning C4005: 'DXGI_ERROR_UNSUPPORTED' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(25,9): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(26,9): warning C4005: 'DXGI_ERROR_DEVICE_HUNG' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(27,9): warning C4005: 'DXGI_ERROR_DEVICE_RESET' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(28,9): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(29,9): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(30,9): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(31,9): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(32,9): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(33,9): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(34,9): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(35,9): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d11.h(917,9): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d11.h(918,9): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d11.h(919,9): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d11.h(920,9): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d10.h(608,9): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d10.h(609,9): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(12,9): warning C4005: 'DXGI_STATUS_OCCLUDED' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(13,9): warning C4005: 'DXGI_STATUS_CLIPPED' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(14,9): warning C4005: 'DXGI_STATUS_NO_REDIRECTION' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(15,9): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(16,9): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(17,9): warning C4005: 'DXGI_STATUS_MODE_CHANGED' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(18,9): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(21,9): warning C4005: 'DXGI_ERROR_INVALID_CALL' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(22,9): warning C4005: 'DXGI_ERROR_NOT_FOUND' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(23,9): warning C4005: 'DXGI_ERROR_MORE_DATA' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(24,9): warning C4005: 'DXGI_ERROR_UNSUPPORTED' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(25,9): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(26,9): warning C4005: 'DXGI_ERROR_DEVICE_HUNG' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(27,9): warning C4005: 'DXGI_ERROR_DEVICE_RESET' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(28,9): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(29,9): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(30,9): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(31,9): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(32,9): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(33,9): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(34,9): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(35,9): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\d3d11.h(917,9): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\d3d11.h(918,9): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\d3d11.h(919,9): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\d3d11.h(920,9): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\d3d10.h(608,9): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\d3d10.h(609,9): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND' : redéfinition de macro
   imgui_impl_win32.cpp
   imgui_tables.cpp
   imgui_widgets.cpp
   kiero.cpp
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(12,9): warning C4005: 'DXGI_STATUS_OCCLUDED' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(13,9): warning C4005: 'DXGI_STATUS_CLIPPED' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(14,9): warning C4005: 'DXGI_STATUS_NO_REDIRECTION' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(15,9): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(16,9): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(17,9): warning C4005: 'DXGI_STATUS_MODE_CHANGED' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(18,9): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(21,9): warning C4005: 'DXGI_ERROR_INVALID_CALL' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(22,9): warning C4005: 'DXGI_ERROR_NOT_FOUND' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(23,9): warning C4005: 'DXGI_ERROR_MORE_DATA' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(24,9): warning C4005: 'DXGI_ERROR_UNSUPPORTED' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(25,9): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(26,9): warning C4005: 'DXGI_ERROR_DEVICE_HUNG' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(27,9): warning C4005: 'DXGI_ERROR_DEVICE_RESET' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(28,9): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(29,9): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(30,9): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(31,9): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(32,9): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(33,9): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(34,9): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(35,9): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d11.h(917,9): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d11.h(918,9): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d11.h(919,9): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d11.h(920,9): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d10.h(608,9): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' : redéfinition de macro
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d10.h(609,9): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(12,9): warning C4005: 'DXGI_STATUS_OCCLUDED' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(13,9): warning C4005: 'DXGI_STATUS_CLIPPED' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(14,9): warning C4005: 'DXGI_STATUS_NO_REDIRECTION' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(15,9): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(16,9): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(17,9): warning C4005: 'DXGI_STATUS_MODE_CHANGED' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(18,9): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(21,9): warning C4005: 'DXGI_ERROR_INVALID_CALL' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(22,9): warning C4005: 'DXGI_ERROR_NOT_FOUND' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(23,9): warning C4005: 'DXGI_ERROR_MORE_DATA' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(24,9): warning C4005: 'DXGI_ERROR_UNSUPPORTED' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(25,9): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(26,9): warning C4005: 'DXGI_ERROR_DEVICE_HUNG' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(27,9): warning C4005: 'DXGI_ERROR_DEVICE_RESET' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(28,9): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(29,9): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(30,9): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(31,9): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(32,9): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(33,9): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(34,9): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\dxgitype.h(35,9): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\d3d11.h(917,9): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\d3d11.h(918,9): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\d3d11.h(919,9): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\d3d11.h(920,9): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\d3d10.h(608,9): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' : redéfinition de macro
+C:\Program Files (x86)\Microsoft DirectX SDK\Include\d3d10.h(609,9): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND' : redéfinition de macro
   utils.hpp
   Génération de code en cours...
 cl : ligne de commande  warning D9025: substitution de '/sdl' par '/GS-'
@@ -113,4 +113,4 @@ cl : ligne de commande  warning D9025: substitution de '/sdl' par '/GS-'
   hook.c
   trampoline.c
   Génération de code en cours...
-  Apex_Private_Internal.vcxproj -> C:\Users\monstercheat\Desktop\Apex_Private_Internal\x64\Release\apex.dll
+  Apex_Private_Internal.vcxproj -> C:\Users\monstercheat\Desktop\MCApexInternal-main\x64\Release\apex.dll

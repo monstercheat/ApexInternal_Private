@@ -117,47 +117,6 @@ void W2S(Vector3 Position, Vector3& Screen, BaseMatrix Matrix)
 	Screen = out;
 }
 
-
-namespace Offsets {
-	DWORD Entity = 0x1eabd08; //cl_entitylist0x0216f7b0 
-	DWORD LocalPlayer = 0x225a8a8;
-	DWORD ViewRender = 0x74dd028;
-	DWORD viewAngles = 0x2534 - 0x14;
-	DWORD in_duck = 0x074de4a0;
-	DWORD PunchAngle = 0x2438;
-	DWORD OFF_GLOW_ENABLE = 0x028c;                       //Script_Highlight_GetCurrentContext
-	DWORD OFF_GLOW_THROUGH_WALL = 0x26c;                 //Script_Highlight_SetVisibilityType
-	DWORD OFF_GLOW_FIX = 0x270;
-	DWORD OFF_GLOW_HIGHLIGHT_ID = 0x298;                 //[DT_HighlightSettings].m_highlightServerActiveStates    
-	DWORD OFF_GLOW_HIGHLIGHTS = 0xade5c40;      //HighlightSettings
-
-	DWORD showfps_enabled = 0x0185d450;
-	DWORD Bones = 0x0da0 + 0x48;
-	DWORD m_grapple = 0x1da8;
-	DWORD shadow_enable = 0x016ef3a0;
-	DWORD CPlayer_camera_origin = 0x1ed0;
-	DWORD ViewModule = 0x2d18;
-	DWORD IN_JUMP = 0x074de3a0;
-	DWORD TimeBase = 0x2088;
-	DWORD m_traversalProgress = 0x2aec;
-	DWORD m_traversalStartTime = 0x2af0;
-	DWORD ss_viewmodelfov = 0x02236c90;
-	DWORD m_iObserverMode = 0x34a4;
-	DWORD m_xp = 0x36a4;
-	DWORD m_iSignifierName = 0x0468;
-	DWORD m_ModelName = 0x0030;
-	DWORD NameList = 0xc7912b0;
-	DWORD ViewMatrix = 0x11a350;
-	DWORD M_VecAbsOrigin = 0x017c;
-	DWORD m_localOrigin = 0x0188;
-	DWORD m_localAngles = 0x0194;
-	DWORD m_Health = 0x0318;
-	DWORD m_Shield = 0x01a0;
-	DWORD m_MaxShield = 0x01a4;
-	DWORD m_Shield_type = 0x463c;
-	DWORD m_lastUCmdSimulationTicks = 0x1c54;
-	DWORD m_lastUCmdSimulationRemainderTime = 0x1c58;
-}
 void DrawRotatedImageWithBox(ImTextureID textureID, float x, float y, float width, float height)
 {
 	// Calculate the center point of the rectangle
@@ -205,11 +164,11 @@ inline std::string getName(uintptr_t address)
 {
 	for (int i = 0; i < 250; i++)
 	{
-		std::uintptr_t Entity = (*reinterpret_cast<std::uintptr_t*>(((uintptr_t)GetModuleHandleA(NULL) + Offsets::Entity + (i << 5))));
+		std::uintptr_t Entity = (*reinterpret_cast<std::uintptr_t*>(((uintptr_t)GetModuleHandleA(NULL) + OffsetsT1::Entity + (i << 5))));
 
 		if (address == Entity)
 		{
-			uintptr_t nameptr = *reinterpret_cast<uintptr_t*>((uintptr_t)GetModuleHandleA(NULL) + Offsets::NameList + (i - 1) * 0x10);
+			uintptr_t nameptr = *reinterpret_cast<uintptr_t*>((uintptr_t)GetModuleHandleA(NULL) + OffsetsT1::NameList + (i - 1) * 0x10);
 			if (!nameptr) continue;
 
 			char* name = reinterpret_cast<char*>(nameptr);
@@ -222,14 +181,14 @@ inline std::string getName(uintptr_t address)
 
 inline std::string getModelName(uintptr_t Address)
 {
-	uintptr_t pMode_Name = *reinterpret_cast<uintptr_t*>(Address + Offsets::m_ModelName);
+	uintptr_t pMode_Name = *reinterpret_cast<uintptr_t*>(Address + OffsetsT1::m_ModelName);
 	char* modelName = reinterpret_cast<char*>(pMode_Name);
 	std::string s(modelName);
 	return s;
 }
 inline std::string getSignifierName(uintptr_t Address)
 {
-	uintptr_t sigAddr = *reinterpret_cast<uintptr_t*>(Address + Offsets::m_iSignifierName);
+	uintptr_t sigAddr = *reinterpret_cast<uintptr_t*>(Address + OffsetsT1::m_iSignifierName);
 	if (sigAddr == 0)
 		return "";
 
@@ -240,7 +199,7 @@ inline std::string getSignifierName(uintptr_t Address)
 }
 inline int GetPlayerLevel(uintptr_t address)
 {
-	int m_xp = *reinterpret_cast<int*>(address + Offsets::m_xp); //m_xp
+	int m_xp = *reinterpret_cast<int*>(address + OffsetsT1::m_xp); //m_xp
 	if (m_xp < 0) return 0;
 	if (m_xp < 100) return 1;
 
@@ -265,7 +224,7 @@ bool IsVisable(uintptr_t LittleNiglet)
 }
 inline Vector3 getBonePositionByHitbox(int id, uintptr_t address)
 {
-	Vector3 origin = *reinterpret_cast<Vector3*>(address + Offsets::M_VecAbsOrigin);
+	Vector3 origin = *reinterpret_cast<Vector3*>(address + OffsetsT1::M_VecAbsOrigin);
 
 	//BoneByHitBox
 	uint64_t Model = *(uint64_t*)(address + 0xff0);
@@ -286,7 +245,7 @@ inline Vector3 getBonePositionByHitbox(int id, uintptr_t address)
 		return Vector3();
 
 	//hitpos
-	uint64_t BoneArray = *(uint64_t*)(address + Offsets::Bones);
+	uint64_t BoneArray = *(uint64_t*)(address + OffsetsT1::Bones);
 
 	matrix3x4_t Matrix = *reinterpret_cast<matrix3x4_t*>(BoneArray + Bone * sizeof(matrix3x4_t));
 
@@ -491,9 +450,9 @@ Vector2  SilentAngles;
 bool WasTrue = true;
 void SilentBlacktrack()
 {
-	ULONG64 NetChannel = *reinterpret_cast<ULONG64*>((uintptr_t)GetModuleHandleA(NULL) + 0x17c7000);
-	ULONG64 m_pCommands = *reinterpret_cast<ULONG64*>((uintptr_t)GetModuleHandleA(NULL) + 0x2243820);
-	ULONG LastCommand = *reinterpret_cast<ULONG*>((uintptr_t)GetModuleHandleA(NULL) + 0x17e7d94);
+	ULONG64 NetChannel = *reinterpret_cast<ULONG64*>((uintptr_t)GetModuleHandleA(NULL) + 0x17e8bd0);
+	ULONG64 m_pCommands = *reinterpret_cast<ULONG64*>((uintptr_t)GetModuleHandleA(NULL) + 0x22927f0);
+	ULONG LastCommand = *reinterpret_cast<ULONG*>((uintptr_t)GetModuleHandleA(NULL) + 0x180996c);
 	ULONG64 CurrentCommand = m_pCommands + (0x228 * (LastCommand % 750));
 
 	if (WasTrue)
@@ -527,16 +486,16 @@ void SetColorState(long HighlightSettingsPointer, long HighlightSize, int Highli
 }
 
 void SetGlow(uintptr_t Target, int GlowEnabled, int GlowThroughWall, int HighlightID) {
-	*reinterpret_cast<int*>(Target + Offsets::OFF_GLOW_ENABLE) = GlowEnabled;
-	*reinterpret_cast<int*>(Target + Offsets::OFF_GLOW_THROUGH_WALL) = GlowThroughWall;
-	*reinterpret_cast<int*>(Target + Offsets::OFF_GLOW_FIX) = 2;
+	*reinterpret_cast<int*>(Target + OffsetsT1::OFF_GLOW_ENABLE) = GlowEnabled;
+	*reinterpret_cast<int*>(Target + OffsetsT1::OFF_GLOW_THROUGH_WALL) = GlowThroughWall;
+	*reinterpret_cast<int*>(Target + OffsetsT1::OFF_GLOW_FIX) = 2;
 	
 }
 
 inline Vector3 getBonePos(int id, uintptr_t Address)
 {
-	Vector3 pos = *reinterpret_cast<Vector3*>(Address + Offsets::M_VecAbsOrigin); //PoopSets::M_VecAbsOrigin
-	uintptr_t bones = *reinterpret_cast<uintptr_t*>(Address + Offsets::Bones); //PoopSets::demfuckingBone
+	Vector3 pos = *reinterpret_cast<Vector3*>(Address + OffsetsT1::M_VecAbsOrigin); //PoopSets::M_VecAbsOrigin
+	uintptr_t bones = *reinterpret_cast<uintptr_t*>(Address + OffsetsT1::Bones); //PoopSets::demfuckingBone
 	Vector3 bone = {};
 	UINT32 boneloc = (id * 0x30);
 	bone_t bo = {};
@@ -553,10 +512,10 @@ std::uintptr_t Aimbot_Target(BaseMatrix M)
 	float Size = 999999.0f;
 	for (auto I = 0; I <= 250; I++)
 	{
-		std::uintptr_t LocalPlayer = (*reinterpret_cast<std::uintptr_t*>((uintptr_t)GetModuleHandleA(NULL) + Offsets::LocalPlayer));
+		std::uintptr_t LocalPlayer = (*reinterpret_cast<std::uintptr_t*>((uintptr_t)GetModuleHandleA(NULL) + OffsetsT1::LocalPlayer));
 		if (!LocalPlayer) return BestEntity;
 
-		std::uintptr_t Entity = (*reinterpret_cast<std::uintptr_t*>(((uintptr_t)GetModuleHandleA(NULL) + Offsets::Entity + ((I + 1) << 5))));
+		std::uintptr_t Entity = (*reinterpret_cast<std::uintptr_t*>(((uintptr_t)GetModuleHandleA(NULL) + OffsetsT1::Entity + ((I + 1) << 5))));
 		if (!Entity) return BestEntity;
 
 		Vector3 Head_Position = getBonePos(BoneList::Head, Entity);
@@ -609,7 +568,7 @@ std::uintptr_t Aimbot_Target(BaseMatrix M)
 				if (newAngle.Empty()) return;
 				if (newAngle.x != 0 && newAngle.y != 0)
 				{
-					/*Vector3 ViewAngle = *reinterpret_cast<Vector3*>(LocalPlayer + Offsets::viewAngles);
+					Vector3 ViewAngle = *reinterpret_cast<Vector3*>(LocalPlayer + OffsetsT1::viewAngles);
 					Vector3 delta = newAngle - ViewAngle;
 
 					delta.Normalize();
@@ -622,9 +581,9 @@ std::uintptr_t Aimbot_Target(BaseMatrix M)
 						newSmoothing *= 18;
 					}
 
-					delta.y /= newSmoothing;*/
+					delta.y /= newSmoothing;
 					
-					*reinterpret_cast<Vector2*>(LocalPlayer + Offsets::viewAngles) = Vector2(newAngle.x , newAngle.y );
+					*reinterpret_cast<Vector2*>(LocalPlayer + OffsetsT1::viewAngles) = Vector2(newAngle.x , newAngle.y );
 				}
 			}
 		}
@@ -633,15 +592,15 @@ std::uintptr_t Aimbot_Target(BaseMatrix M)
  void noRecoil(uintptr_t localPlayer) {
 	 if (localPlayer != NULL) {
 		 Vector2 angles;
-		 angles.y = *reinterpret_cast<float*>(localPlayer + Offsets::viewAngles); //works
-		 angles.x = *reinterpret_cast<float*>(localPlayer + Offsets::viewAngles + sizeof(float)); // works
-		 Vector2 punch = *reinterpret_cast<Vector2*>(localPlayer + Offsets::PunchAngle);
+		 angles.y = *reinterpret_cast<float*>(localPlayer + OffsetsT1::viewAngles); //works
+		 angles.x = *reinterpret_cast<float*>(localPlayer + OffsetsT1::viewAngles + sizeof(float)); // works
+		 Vector2 punch = *reinterpret_cast<Vector2*>(localPlayer + OffsetsT1::PunchAngle);
 		 if (punch.y < 0 || punch.x < 0) {
 			 angles.x -= (punch.y - previousYaw) * yawSTR;
 			 angles.y -= (punch.x - previousPitch) * pitchSTR;
 			 //NormalizeAngles(angles);
-			 *reinterpret_cast<float*>(localPlayer + Offsets::viewAngles) = angles.y;
-			 *reinterpret_cast<float*>(localPlayer + Offsets::viewAngles + sizeof(float)) = angles.x;
+			 *reinterpret_cast<float*>(localPlayer + OffsetsT1::viewAngles) = angles.y;
+			 *reinterpret_cast<float*>(localPlayer + OffsetsT1::viewAngles + sizeof(float)) = angles.x;
 			 previousPitch = punch.x;
 			 previousYaw = punch.y;
 		 }
@@ -651,17 +610,17 @@ std::uintptr_t Aimbot_Target(BaseMatrix M)
  void InitPlayer() {
 	 if ((uintptr_t)GetModuleHandleA(NULL) == NULL) return;
 
-	 LocalPlayer = (*reinterpret_cast<std::uintptr_t*>((uintptr_t)GetModuleHandleA(NULL) + Offsets::LocalPlayer));
+	 LocalPlayer = (*reinterpret_cast<std::uintptr_t*>((uintptr_t)GetModuleHandleA(NULL) + OffsetsT1::LocalPlayer));
 	 if (!LocalPlayer)return;
-	 cl_entitylist = (*reinterpret_cast<std::uintptr_t*>((uintptr_t)GetModuleHandleA(NULL) + Offsets::Entity));
+	 cl_entitylist = (*reinterpret_cast<std::uintptr_t*>((uintptr_t)GetModuleHandleA(NULL) + OffsetsT1::Entity));
 	 if (!cl_entitylist)return;
-	 render = *reinterpret_cast<std::uintptr_t*>((uintptr_t)GetModuleHandleA(NULL) + Offsets::ViewRender);
+	 render = *reinterpret_cast<std::uintptr_t*>((uintptr_t)GetModuleHandleA(NULL) + OffsetsT1::ViewRender);
 	 if (!render)return;
-	 Matrixa = *reinterpret_cast<std::uintptr_t*>(Offsets::ViewMatrix + render);
+	 Matrixa = *reinterpret_cast<std::uintptr_t*>(OffsetsT1::ViewMatrix + render);
 	 if (!Matrixa)return;
 	 BaseMatrix M = *reinterpret_cast<BaseMatrix*>(Matrixa);
 
-	 Vector3 ViewAngle = *reinterpret_cast<Vector3*>(LocalPlayer + Offsets::viewAngles);
+	 Vector3 ViewAngle = *reinterpret_cast<Vector3*>(LocalPlayer + OffsetsT1::viewAngles);
 	 std::string View = "[View Angles]   [ X : " + std::to_string(int(ViewAngle.x)) + " ] [ Y : " + std::to_string(int(ViewAngle.y)) + " ] [ Z : " + std::to_string(int(ViewAngle.x)) + " ]";
 	 ImGui::GetBackgroundDrawList()->AddText(ImVec2(10, 500), ImColor(255, 0, 0, 255), View.c_str());
 
@@ -676,7 +635,7 @@ std::uintptr_t Aimbot_Target(BaseMatrix M)
 
 	 for (auto idx{ 0 }; idx <= 17000; idx++)
 	 {
-		 std::uintptr_t Entity = (*reinterpret_cast<std::uintptr_t*>(((uintptr_t)GetModuleHandleA(NULL) + Offsets::Entity + ((idx + 1) << 5))));
+		 std::uintptr_t Entity = (*reinterpret_cast<std::uintptr_t*>(((uintptr_t)GetModuleHandleA(NULL) + OffsetsT1::Entity + ((idx + 1) << 5))));
 		 if (Entity == LocalPlayer) continue;
 
 		 if (!Entity) continue;
@@ -685,9 +644,9 @@ std::uintptr_t Aimbot_Target(BaseMatrix M)
 
 		 if (Ent_Script == "CPlayer" || Ent_Script == "CAI_BaseNPC")
 		 {
-			 Vector3 Position = (*reinterpret_cast<Vector3*>(Entity + Offsets::M_VecAbsOrigin));
+			 Vector3 Position = (*reinterpret_cast<Vector3*>(Entity + OffsetsT1::M_VecAbsOrigin));
 			 if (Position.Empty()) continue;
-			 Vector3 LPPosition = (*reinterpret_cast<Vector3*>(LocalPlayer + Offsets::M_VecAbsOrigin));
+			 Vector3 LPPosition = (*reinterpret_cast<Vector3*>(LocalPlayer + OffsetsT1::M_VecAbsOrigin));
 			 if (LPPosition.Empty()) continue;
 
 			 float DistancAe = calcDist(Position, LPPosition) / 20;
@@ -714,15 +673,15 @@ std::uintptr_t Aimbot_Target(BaseMatrix M)
 			 if (Topout.Empty()) continue;
 			 if (NewPosHomer.Empty()) continue;
 
-			 int Current_Health = (*reinterpret_cast<int*>(Entity + Offsets::m_Health));
+			 int Current_Health = (*reinterpret_cast<int*>(Entity + OffsetsT1::m_Health));
 
-			 int Current_Shield = (*reinterpret_cast<int*>(Entity + Offsets::m_Shield));
+			 int Current_Shield = (*reinterpret_cast<int*>(Entity + OffsetsT1::m_Shield));
 
-			 int Max_Shield = (*reinterpret_cast<int*>(Entity + Offsets::m_MaxShield));
+			 int Max_Shield = (*reinterpret_cast<int*>(Entity + OffsetsT1::m_MaxShield));
 
-			 int Current_Shield_Type = (*reinterpret_cast<int*>(Entity + Offsets::m_Shield_type));
+			 int Current_Shield_Type = (*reinterpret_cast<int*>(Entity + OffsetsT1::m_Shield_type));
 
-			 int LocalPlayer_Health = (*reinterpret_cast<int*>(Entity + Offsets::m_Health));
+			 int LocalPlayer_Health = (*reinterpret_cast<int*>(Entity + OffsetsT1::m_Health));
 																  
 			 if (LocalPlayer_Health < 0.1f) continue; // If Dead Skip Entity
 			 if (Current_Health < 0.1f) continue; // If i am dead don't pass through
@@ -916,32 +875,32 @@ std::uintptr_t Aimbot_Target(BaseMatrix M)
 			 {
 				 if (GetAsyncKeyState(FreeCamKey))
 				 {
-					 *reinterpret_cast<int*>(LocalPlayer + Offsets::m_iObserverMode) = 7;
+					 *reinterpret_cast<int*>(LocalPlayer + OffsetsT1::m_iObserverMode) = 7;
 					 std::string Text = "[Free Cam]";
 					 ImVec2 Size = ImGui::CalcTextSize(Text.c_str());
 
 					 ImGui::GetBackgroundDrawList()->AddText(ImVec2(GetSystemMetrics(0) / 2 - Size.x, GetSystemMetrics(1) / 2 - Size.y), ImColor(255, 0, 0, 255), Text.c_str());
 				 }
 				 else {
-					 *reinterpret_cast<int*>(LocalPlayer + Offsets::m_iObserverMode) = 0;
+					 *reinterpret_cast<int*>(LocalPlayer + OffsetsT1::m_iObserverMode) = 0;
 				 }
 			 }
 			 if (SimulateCMD)
 			 {
 
 				 if (GetAsyncKeyState(SimulateCMDKey))
-					 *reinterpret_cast<int*>(LocalPlayer + Offsets::m_lastUCmdSimulationTicks) = 1132396544;
+					 *reinterpret_cast<int*>(LocalPlayer + OffsetsT1::m_lastUCmdSimulationTicks) = 1132396544;
 
 			 }
 			 if (Auto_Grapple)
 			 {
 				 if (GetAsyncKeyState(Auto_GrappleKey))
 				 {
-					 *reinterpret_cast<int*>((uintptr_t)GetModuleHandleA(NULL) + Offsets::IN_JUMP + 0x8) = 4;
+					 *reinterpret_cast<int*>((uintptr_t)GetModuleHandleA(NULL) + OffsetsT1::IN_JUMP + 0x8) = 4;
 
-					 auto Gn = *reinterpret_cast<int*>(LocalPlayer + Offsets::m_grapple + 0x0048);
+					 auto Gn = *reinterpret_cast<int*>(LocalPlayer + OffsetsT1::m_grapple + 0x0048);
 					 if (Gn == 1) {
-						 *reinterpret_cast<int*>((uintptr_t)GetModuleHandleA(NULL) + Offsets::IN_JUMP + 0x8) = 5;
+						 *reinterpret_cast<int*>((uintptr_t)GetModuleHandleA(NULL) + OffsetsT1::IN_JUMP + 0x8) = 5;
 					 }
 				 }
 			 }
@@ -966,10 +925,10 @@ std::uintptr_t Aimbot_Target(BaseMatrix M)
 		
 		 if (Super_Glide)
 		 {
-			 uintptr_t m_grapple = Offsets::m_grapple;
-			 uintptr_t timeBase = Offsets::TimeBase;
-			 uintptr_t OFFSET_m_traversalStartTime = Offsets::m_traversalStartTime;
-			 uintptr_t OFFSET_m_traversalProgress = Offsets::m_traversalProgress;
+			 uintptr_t m_grapple = OffsetsT1::m_grapple;
+			 uintptr_t timeBase = OffsetsT1::TimeBase;
+			 uintptr_t OFFSET_m_traversalStartTime = OffsetsT1::m_traversalStartTime;
+			 uintptr_t OFFSET_m_traversalProgress = OffsetsT1::m_traversalProgress;
 			 static float startjumpTime = 0;
 			 static bool startSg = false;
 
@@ -988,16 +947,16 @@ std::uintptr_t Aimbot_Target(BaseMatrix M)
 
 				 if (startSg) {
 					 //press button
-					 *reinterpret_cast<int*>((uintptr_t)GetModuleHandleA(NULL) + Offsets::IN_JUMP + 0x8) = 7;
+					 *reinterpret_cast<int*>((uintptr_t)GetModuleHandleA(NULL) + OffsetsT1::IN_JUMP + 0x8) = 7;
 					 if ((WorldTime - startjumpTime) > 0.007) {
-						 *reinterpret_cast<int*>((uintptr_t)GetModuleHandleA(NULL) + Offsets::in_duck + 0x8) = 6;
+						 *reinterpret_cast<int*>((uintptr_t)GetModuleHandleA(NULL) + OffsetsT1::in_duck + 0x8) = 6;
 					 }
 				 }
 
 				 if ((WorldTime - startjumpTime) > 1.5f && startSg) {
 					 //need to release button
-					 *reinterpret_cast<int*>((uintptr_t)GetModuleHandleA(NULL) + Offsets::IN_JUMP + 0x8) = 4;
-					 *reinterpret_cast<int*>((uintptr_t)GetModuleHandleA(NULL) + Offsets::in_duck + 0x8) = 4;
+					 *reinterpret_cast<int*>((uintptr_t)GetModuleHandleA(NULL) + OffsetsT1::IN_JUMP + 0x8) = 4;
+					 *reinterpret_cast<int*>((uintptr_t)GetModuleHandleA(NULL) + OffsetsT1::in_duck + 0x8) = 4;
 					 startSg = false;
 				 }
 
@@ -1023,12 +982,12 @@ std::uintptr_t Aimbot_Target(BaseMatrix M)
 		 }
 		 if (HeirloomChanger)
 		 {
-			 auto handle = *reinterpret_cast<uintptr_t*>(LocalPlayer + Offsets::ViewModule);
+			 auto handle = *reinterpret_cast<uintptr_t*>(LocalPlayer + OffsetsT1::ViewModule);
 			 handle &= 0xFFFF;
-			 auto ptr = (uint64_t)((uintptr_t)GetModuleHandleA(NULL) + Offsets::Entity + (handle << 5));
+			 auto ptr = (uint64_t)((uintptr_t)GetModuleHandleA(NULL) + OffsetsT1::Entity + (handle << 5));
 			 if (!ptr) return;
 			 char modelName[200] = { 0 };
-			 auto name_ptr = *reinterpret_cast<uint64_t*>(ptr + Offsets::m_ModelName);
+			 auto name_ptr = *reinterpret_cast<uint64_t*>(ptr + OffsetsT1::m_ModelName);
 			 std::string model_name = getModelName(ptr);
 			 int cur_seq, index;
 			 std::cout << "MDL : " << model_name << "\n";
@@ -1047,23 +1006,23 @@ std::uintptr_t Aimbot_Target(BaseMatrix M)
 		 }
 		 if (BigMapRadar)
 		 {
-			 int LocalPlayer_TeamID = (*reinterpret_cast<int*>(LocalPlayer + 0x0328)); //m_iTeamNum=0x0328
+			 int LocalPlayer_TeamID = (*reinterpret_cast<int*>(LocalPlayer + OffsetsT1::OFFSET_TEAM));
 			 if (LocalPlayer_TeamID != 1) {
-				 uintptr_t timeBase = Offsets::TimeBase;
+				 uintptr_t timeBase = OffsetsT1::TimeBase;
 
 				 float curTime = *reinterpret_cast<float*>(Entity + timeBase);
 				 double continueTime = 0.2;
 				 float endTime = curTime + continueTime;
 				 while (curTime < endTime)
 				 {
-					 *reinterpret_cast<int*>(Entity + 0x0328) = 1;
+					 *reinterpret_cast<int*>(Entity + OffsetsT1::OFFSET_TEAM) = 1;
 					 curTime = *reinterpret_cast<float*>(Entity + timeBase);
 				 }
 				 curTime = *reinterpret_cast<float*>(Entity + timeBase);
 				 endTime = curTime + continueTime;
 				 while (curTime < endTime)
 				 {
-					 *reinterpret_cast<int*>(Entity + 0x0328) = LocalPlayer_TeamID;
+					 *reinterpret_cast<int*>(Entity + OffsetsT1::OFFSET_TEAM) = LocalPlayer_TeamID;
 					 curTime = *reinterpret_cast<float*>(Entity + timeBase);
 				 }
 			 }
@@ -1071,10 +1030,10 @@ std::uintptr_t Aimbot_Target(BaseMatrix M)
 			 {
 				 int nowtime = GetTickCount();
 				 while (GetTickCount() - nowtime < 200) {
-					 *reinterpret_cast<int*>(Entity + 0x0328, i);
+					 *reinterpret_cast<int*>(Entity + OffsetsT1::OFFSET_TEAM, i);
 				 }
 			 }
-			 *reinterpret_cast<int*>(Entity + 0x0328) = LocalPlayer_TeamID;
+			 *reinterpret_cast<int*>(Entity + OffsetsT1::OFFSET_TEAM) = LocalPlayer_TeamID;
 		 }
 
 		 if (OFFIndicator)
@@ -1090,31 +1049,31 @@ std::uintptr_t Aimbot_Target(BaseMatrix M)
 
 			 if (GetAsyncKeyState(UpTpKey))
 			 {
-				 *reinterpret_cast<bool*>(LocalPlayer + 0x4048) = true; //m_isLungingToPosition=0x4038
-				 *reinterpret_cast<bool*>(LocalPlayer + 0x4078) = true; //m_lungeCanFly=0x4068
-				 *reinterpret_cast<float*>(LocalPlayer + 0x4084) = 9000.f; //m_lungeMaxTime=0x4074
-				 *reinterpret_cast<float*>(LocalPlayer + 0x4088) = 9000.f; //m_lungeMaxEndSpeed=0x4074
-				 *reinterpret_cast<Vector3*>(LocalPlayer + 0x404c) = Vector3(TpStrength.x, 0, 0); //m_lungeTargetPosition=0x403c
+				 *reinterpret_cast<bool*>(LocalPlayer + 0x40e0) = true; //m_isLungingToPosition=0x4038
+				 *reinterpret_cast<bool*>(LocalPlayer + 0x4110) = true; //m_lungeCanFly=0x4068
+				 *reinterpret_cast<float*>(LocalPlayer + 0x411c) = 9000.f; //m_lungeMaxTime=0x4074
+				 *reinterpret_cast<float*>(LocalPlayer + 0x4120) = 9000.f; //m_lungeMaxEndSpeed=0x4074
+				 *reinterpret_cast<Vector3*>(LocalPlayer + 0x40e4) = Vector3(TpStrength.x, 0, 0); //m_lungeTargetPosition=0x403c
 			 }
 			 if (GetAsyncKeyState(DownTpKey))
 			 {
-				 *reinterpret_cast<bool*>(LocalPlayer + 0x4048) = true; //m_isLungingToPosition=0x4038
-				 *reinterpret_cast<bool*>(LocalPlayer + 0x4078) = true; //m_lungeCanFly=0x4068
-				 *reinterpret_cast<Vector3*>(LocalPlayer + 0x404c) = Vector3(0, TpStrength.y, 0); //m_lungeTargetPosition=0x403c
+				 *reinterpret_cast<bool*>(LocalPlayer + 0x40e0) = true; //m_isLungingToPosition=0x4038
+				 *reinterpret_cast<bool*>(LocalPlayer + 0x4110) = true; //m_lungeCanFly=0x4068
+				 *reinterpret_cast<Vector3*>(LocalPlayer + 0x40e4) = Vector3(0, TpStrength.y, 0); //m_lungeTargetPosition=0x403c
 			 }
 
 		 }
 		 if (Show_Fps) //// works
-			 *reinterpret_cast<bool*>((uintptr_t)GetModuleHandleA(NULL) + Offsets::showfps_enabled + 0x6c) = true;
-		 else  *reinterpret_cast<bool*>((uintptr_t)GetModuleHandleA(NULL) + Offsets::showfps_enabled + 0x6c) = false;
+			 *reinterpret_cast<bool*>((uintptr_t)GetModuleHandleA(NULL) + OffsetsT1::showfps_enabled + 0x6c) = true;
+		 else  *reinterpret_cast<bool*>((uintptr_t)GetModuleHandleA(NULL) + OffsetsT1::showfps_enabled + 0x6c) = false;
 
 		 if (DisableShadow) //// works
-			 *reinterpret_cast<bool*>((uintptr_t)GetModuleHandleA(NULL) + Offsets::shadow_enable + 0x6c) = true;
-		 else  *reinterpret_cast<bool*>((uintptr_t)GetModuleHandleA(NULL) + Offsets::shadow_enable + 0x6c) = false;
+			 *reinterpret_cast<bool*>((uintptr_t)GetModuleHandleA(NULL) + OffsetsT1::shadow_enable + 0x6c) = true;
+		 else  *reinterpret_cast<bool*>((uintptr_t)GetModuleHandleA(NULL) + OffsetsT1::shadow_enable + 0x6c) = false;
 
 
 		 if (FovChanger) //// works
-			 *reinterpret_cast<float*>((uintptr_t)GetModuleHandleA(NULL) + Offsets::ss_viewmodelfov + 0x6c) = PlayerFov;
+			 *reinterpret_cast<float*>((uintptr_t)GetModuleHandleA(NULL) + OffsetsT1::ss_viewmodelfov + 0x6c) = PlayerFov;
 
 		 if (Rcs)
 		 {
@@ -1126,30 +1085,30 @@ std::uintptr_t Aimbot_Target(BaseMatrix M)
 			 uintptr_t m_melee = *reinterpret_cast<uintptr_t*>(LocalPlayer + 0x3190);
 			 if (m_melee)
 			 {
-				 *reinterpret_cast<bool*>(m_melee + 0x35e0) = true; //m_flTimeLastJumped=0x35e0
-				 *reinterpret_cast<Vector3*>(m_melee + 0x35e0) = Vector3(10, 10, 10); //m_flTimeLastJumped=0x35e0
+				 *reinterpret_cast<bool*>(m_melee + 0x3670) = true; //m_flTimeLastJumped=0x35e0
+				 *reinterpret_cast<Vector3*>(m_melee + 0x3670) = Vector3(10, 10, 10); //m_flTimeLastJumped=0x35e0
 			 }
 		 }
 		 if (NoJumpRestraint)
 		 {
 
-			 *reinterpret_cast<float*>(LocalPlayer + 0x35d4) = 99999.0f; // m_flTimeLastTouchedWall = 0x35c4
+			 *reinterpret_cast<float*>(LocalPlayer + 0x3664) = 99999.0f; // m_flTimeLastTouchedWall = 0x35c4
 
-			 *reinterpret_cast<float*>(LocalPlayer + 0x35e0) = 0.01f; //m_flTimeLastJumped=0x35e0
+			 *reinterpret_cast<float*>(LocalPlayer + 0x3670) = 0.01f; //m_flTimeLastJumped=0x35e0
 
-			 *reinterpret_cast<float*>(LocalPlayer + 0x35f0) = 0.01f; //m_flTimeLastLanded=0x35e0
+			 *reinterpret_cast<float*>(LocalPlayer + 0x3680) = 0.01f; //m_flTimeLastLanded=0x35e0
 
-			 *reinterpret_cast<bool*>(LocalPlayer + 0x4618) = false; //m_pushAwayFromTopAcceleration=0x3609
+			 *reinterpret_cast<bool*>(LocalPlayer + 0x46b0) = false; //m_pushAwayFromTopAcceleration=0x3609
 
-			 *reinterpret_cast<bool*>(LocalPlayer + 0x3619) = false; //m_bDoMultiJumpPenalty=0x3609
-			 *reinterpret_cast<bool*>(LocalPlayer + 0x3618) = false; //m_bHasJumpedSinceTouchedGround=0x3608
+			 *reinterpret_cast<bool*>(LocalPlayer + 0x36a9) = false; //m_bDoMultiJumpPenalty=0x3609
+			 *reinterpret_cast<bool*>(LocalPlayer + 0x36a8) = false; //m_bHasJumpedSinceTouchedGround=0x3608
 		 }
 		 if (SpinBot)
 		 {
-			 int LocalPlayer_HealthA = (*reinterpret_cast<int*>(Entity + Offsets::m_Health));
-			 uintptr_t ViewModelHandle = *reinterpret_cast<uintptr_t*>(LocalPlayer + 0x2d18) & 0xFFFF;
+			 int LocalPlayer_HealthA = (*reinterpret_cast<int*>(Entity + OffsetsT1::m_Health));
+			 uintptr_t ViewModelHandle = *reinterpret_cast<uintptr_t*>(LocalPlayer + OffsetsT1::ViewModule) & 0xFFFF;
 			 if (!ViewModelHandle) continue;
-			 uintptr_t ViewModel = *reinterpret_cast<uintptr_t*>((uintptr_t)GetModuleHandleA(NULL) + Offsets::Entity + (ViewModelHandle << 5));
+			 uintptr_t ViewModel = *reinterpret_cast<uintptr_t*>((uintptr_t)GetModuleHandleA(NULL) + OffsetsT1::Entity + (ViewModelHandle << 5));
 			 if (!ViewModel) continue;
 
 			 if (LocalPlayer_HealthA > 1)
@@ -1160,8 +1119,8 @@ std::uintptr_t Aimbot_Target(BaseMatrix M)
 			 if (CanSpin) // prevents crashing on kill cam
 			 {
 				 *reinterpret_cast<int*>(LocalPlayer_HealthA) = 0; // Fake Client Dead To Force Networking Angles
-				 *reinterpret_cast<Vector3*>(LocalPlayer + 0x0378) = Vector3(rand() % 100, rand() % -250, rand() % 500); // m_angNetworkAngles server / client
-				 *reinterpret_cast<Vector3*>(ViewModel + 0x0378) = Vector3(rand() % 100, rand() % -250, rand() % 500); // m_angNetworkAngles View Module
+				 *reinterpret_cast<Vector3*>(LocalPlayer + 0x0388) = Vector3(rand() % 100, rand() % -250, rand() % 500); // m_angNetworkAngles server / client
+				 *reinterpret_cast<Vector3*>(ViewModel + 0x0388) = Vector3(rand() % 100, rand() % -250, rand() % 500); // m_angNetworkAngles View Module
 			 }
 			 
 		 }
